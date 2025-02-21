@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "4",
+      "name": "Lola Varga",
+      "eyeColor": "Green",
+      "age": 28
+    },
+    {
+      "id": "2755",
+      "name": "Aleksa",
+      "age": "29",
+      "eyeColor": "Blue"
+    },
+    {
+      "id": "7036",
+      "name": "Test",
+      "age": "123",
+      "eyeColor": "Green"
+    },
+    {
+      "id": "8eef",
+      "name": "Test1",
+      "age": "312",
+      "eyeColor": "123"
+    },
+    {
+      "id": "1038",
+      "name": "Anoter",
+      "age": "321",
+      "eyeColor": "231"
+    },
+    {
+      "id": "e4cc",
+      "name": "asdasd",
+      "age": "asdd",
+      "eyeColor": "asdasd"
+    },
+    {
+      "id": "9f7a",
+      "name": "TEE",
+      "age": "123",
+      "eyeColor": "123"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<section class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      Create User
+    </div>
+    <div class="card-body">
+      <form [formGroup]="form">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+          </div>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Eyes</span>
+          </div>
+          <input type="text" class="form-control" formControlName="eyeColor">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Age</span>
+          </div>
+          <input type="text" class="form-control" formControlName="age">
+        </div>
+
+        <button class="btn btn-outline-success" [disabled]="this.form.invalid" (click)="saveUser()">Save</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+
+<div class="container mt-5">
+  <button class="btn btn-primary mb-2" (click)="navigateToCreate()">Add User</button>
+  <div class="card">
+    <div class="card-header">
+      User List
+    </div>
+    <div class="card-body">
+      <form [formGroup]="form">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Eyes Color</th>
+              <th scope="col">Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users$ | async; let i = index">
+              <ng-container>
+                <th scope="row">{{ i }}</th>
+                <td (click)="navigateToEdit(user)">{{ user.name }}</td>
+                <td>{{ user.eyeColor }}</td>
+                <td>
+                  <div class="d-flex justify-content-between">
+                    <span>{{ user.age }}</span>
+                    <i class="bi bi-trash2-fill" (click)="deleteUser(user.id)"></i>
+                  </div>
+                  </td>
+              </ng-container>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

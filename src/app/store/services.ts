@@ -10,7 +10,6 @@ export class UserServices {
 
   constructor(private _http: HttpClient) { }
 
-
   getAllUsers(): Observable<any> {
     return this._http.get(this.URL);
   }

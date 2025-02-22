@@ -4,3 +4,7 @@ export interface Users {
   eyeColor: boolean;
   age: number;
 }
+
+export interface UserState {
+  users: Users[];
+}

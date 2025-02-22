@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { Users } from './user.model';
+import { Users, UserState } from './user.model';
 import {
   createUser,
   createUserSuccess,
@@ -10,10 +10,6 @@ import {
   updateUserSuccess,
   userOperationFailure } from './action';
 
-export interface UserState {
-  users: Users[]; // The users array should be part of the UserState
-}
-
 const initialState: UserState = {
   users: []
 };
@@ -21,14 +17,14 @@ const initialState: UserState = {
 export const userReducer = createReducer(
   initialState,
 
-  // Load Document Center
+  // Load list of users
   on(loadUsers, (state) => {
     return {
       ...state
     }; 
   }),
 
-  // Load Document Center Success
+  // Load list of users success
   on(loadUsersSuccess, (state, { users }) => {
     return {
       ...state,

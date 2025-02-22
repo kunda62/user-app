@@ -5,9 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AddApointmentFacade } from './user-list.facade';
 import { Router } from '@angular/router';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { loadUsers } from '../../store/action';
 import { selectAllUsers } from '../../store/selectors';
 
 
@@ -37,8 +36,7 @@ export class AddApointmentComponent implements OnInit {
 
   ngOnInit(): void {   
 
-    this._store.dispatch(loadUsers());
-    
+    this._facade.dispachLoad()
   }
 
   navigateToEdit(user: any): void {
